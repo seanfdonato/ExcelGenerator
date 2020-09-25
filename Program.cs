@@ -12,13 +12,22 @@ namespace ExcelGenerator
         static void Main(string[] args)
         {
             //teste();
-            string path = @"C:\Code\teste.xlsx";
-            var docs = new DocumentCreator(path);
+            var t = new Class1();
+            t.create(@"C:\Code\teste.xlsx");
+            //t.CreateSheets(@"C:\Code\teste2.xlsx", "teste", 1);
+            //t.CreateSheets(@"C:\Code\teste2.xlsx", "teste2", 2);
+            //t.CreateSheets(@"C:\Code\teste2.xlsx", "teste3", 3);
+            //t.ReadExcelFileSAX(@"C:\Code\teste.xlsx");
+            t.WriteRandomValuesSAX(@"C:\Code\teste.xlsx",20,10,1,11);
+           // t.WriteRandomValuesSAX(@"C:\Code\teste2.xlsx", 20, 10);
+           // t.WriteRandomValuesSAX(@"C:\Code\teste.xlsx",10,10,2);
+            //string path = @"C:\Code\teste.xlsx";
+            //var docs = new DocumentCreator(path);
 
-            docs.CreateDocument();
+            //docs.CreateDocument();
 
-            docs.AddSheet("Teste");
-            docs.AddSheet("Teste2");
+            //docs.AddSheet("Teste");
+            //docs.AddSheet("Teste2");
         }
         static void teste()
         {
